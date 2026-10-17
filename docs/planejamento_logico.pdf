@@ -1,0 +1,41 @@
+Planejamento Lógico TaskTracker
+1. Apresentação e Entendimento do Problema
+Nome: Heloisa Rodrigues
+Curso: Ciências da Computação
+Polo/Turma: Bootcamp
+E-mail institucional: heloisarodriguesc@sempreceub.com
+O problema a ser resolvido: Durante a rotina de estudos ou de trabalho, é comum lidar com várias tarefas ao mesmo tempo. Isso pode acabar causando esquecimentos, perda de prazos e dificuldade para definir quais atividades devem ser realizadas primeiro. Por isso, é importante ter uma forma simples de organizar e acompanhar essas tarefas.
+Solução: Pensando nessa situação, foi desenvolvido o planejamento do TaskTracker, um sistema voltado para a organização de tarefas. A proposta é permitir que o usuário cadastre suas atividades, informe o prazo e a prioridade de cada uma e acompanhe as tarefas que ainda precisam ser realizadas e as que já foram concluídas.
+2. Decomposição de dados e regras
+Entradas de dados
+Para cadastrar uma nova demanda no sistema, serão solicitados ao usuário os seguintes campos:
+● Título da tarefa: Identificação resumida da atividade.
+● Descrição: Detalhamento do que precisa ser realizado.
+● Prioridade: Grau de urgência da tarefa (opções: Alta, Média ou Baixa).
+● Data limite: Prazo previsto para a entrega ou finalização.
+Saídas de dados
+O sistema apresentará em tela os seguintes retornos ao usuário:
+● Mensagens de confirmação e aviso: Notificações informando o sucesso das operações ou alertas de validação de dados.
+● Visualização de tarefas: Listagem com a exibição detalhada de cada item cadastrado e seu respectivo status.
+● Alerta de lista vazia: Mensagem informativa apresentada caso não haja registros
+cadastrados na base.
+Regras do sistema
+Para garantir a integridade das informações registradas, o sistema adotará as seguintes regras de negócio:
+● O campo Título da tarefa é de preenchimento obrigatório e não poderá ser salvo em branco.
+● A seleção de Prioridade deve seguir estritamente os valores predefinidos (Alta, Média ou Baixa).
+● O cadastro só será efetivado no banco/lista de dados após a validação de todos os campos obrigatórios.
+● Toda tarefa recém-cadastrada iniciará automaticamente com o status padrão de Pendente.
+3. Receita Lógica
+Fluxo de cadastro de tarefas
+● Solicitar ao usuário o preenchimento do Título da tarefa.
+● Verificar se o título foi informado corretamente: se o campo estiver vazio, exibir mensagem alertando a obrigatoriedade e solicitar o dado novamente; se estiver preenchido, prosseguir para os próximos passos.
+● Solicitar a Descrição, a Prioridade e a Data limite.
+● Validar se as informações atendem às regras do sistema.
+● Inserir os dados na lista de armazenamento de tarefas.
+● Exibir na tela a mensagem de confirmação do cadastro.
+Fluxo de visualização das tarefas
+● Consultar a lista de tarefas salvas.
+● Verificar se existe algum registro cadastrado: se a lista estiver vazia, apresentar a mensagem "Não há tarefas cadastradas no momento"; se houver tarefas registradas, percorrer o cadastro e exibir na tela os dados organizados de cada tarefa (Título, Descrição, Prioridade, Data limite e Status).
+4. Mapeamento Arquitetural para Git e GitHub
+O repositório tasktracker-projeto será estruturado com a pasta docs/ para armazenar este planejamento em PDF (planejamento-logico.pdf) e a pasta src/ contendo o código principal em Python (main.py). Na pasta main, o arquivo README.md trará as instruções da aplicação e o .gitignore evitará o versionamento de arquivos temporários.
+5. Link youtube: https://youtu.be/ygDjzTh5AKM
